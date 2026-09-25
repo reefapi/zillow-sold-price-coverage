@@ -51,6 +51,95 @@ coverage is either quoting list price, quoting an estimate, or not counting.
 Rules vary within a state and change over time. Treat the list as *what this measurement was run
 against*, not as legal advice.
 
+## What one row actually looks like, on both sides of the state line
+
+Two complete rows from `zillow/v1/sold`, returned 2026-09-25, with nothing removed except
+the street address. The same query shape, the same field set, one from a disclosure state
+and one from a non-disclosure state. Every field name the endpoint can return is here.
+
+```json
+{
+  "austin_tx__non_disclosure_state": {
+    "zpid": 29476953,
+    "source": "zillow",
+    "url": "https://www.zillow.com/homedetails/3403-Clawson-Rd-Austin-TX-78704/29476953_zpid/",
+    "list_price_usd": null,
+    "price_display": null,
+    "status": "RECENTLY_SOLD",
+    "status_text": "Sold",
+    "property_type": "MULTI_FAMILY",
+    "beds": null,
+    "baths": 2.0,
+    "sqft": 1560.0,
+    "lot_sqft": 8572.0,
+    "zestimate_usd": null,
+    "rent_zestimate_usd": 2643,
+    "tax_assessed_value_usd": 514912.0,
+    "days_on_market": 2,
+    "address_line": "<redacted in this README only — see the note below>",
+    "city": "Austin",
+    "state_code": "TX",
+    "postal_code": "78704",
+    "address": "3403 Clawson Rd, Austin, TX 78704",
+    "latitude": 30.236038,
+    "longitude": -97.77868,
+    "broker_name": "<redacted in this README only — see the note below>",
+    "is_showcase": false,
+    "photos": [
+      "https://photos.zillowstatic.com/fp/f7610667b67d997aac04b0fbe8aecea3-p_e.jpg"
+    ],
+    "is_building": false,
+    "identifier_type": "zpid",
+    "sold_price_usd": null,
+    "sold_date": "2026-09-23",
+    "price_unavailable_reason": "non_disclosure_state",
+    "price_unavailable_detail": "This is a non-disclosure state: the sale price is not a public record there, Zillow carries no number for it, and no retry or other endpoint can produce one."
+  },
+  "columbus_oh__disclosure_state": {
+    "zpid": 33899544,
+    "source": "zillow",
+    "url": "https://www.zillow.com/homedetails/47-Meadowlark-Ln-Columbus-OH-43214/33899544_zpid/",
+    "list_price_usd": 390000.0,
+    "price_display": "$390,000",
+    "status": "RECENTLY_SOLD",
+    "status_text": "Sold",
+    "property_type": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 3.0,
+    "sqft": 1906.0,
+    "lot_sqft": 13503.6,
+    "zestimate_usd": 396200,
+    "rent_zestimate_usd": 2787,
+    "tax_assessed_value_usd": 395900.0,
+    "days_on_market": 0,
+    "address_line": "<redacted in this README only — see the note below>",
+    "city": "Columbus",
+    "state_code": "OH",
+    "postal_code": "43214",
+    "address": "47 Meadowlark Ln, Columbus, OH 43214",
+    "latitude": 40.073128,
+    "longitude": -83.01732,
+    "broker_name": "<redacted in this README only — see the note below>",
+    "is_showcase": false,
+    "photos": [
+      "https://photos.zillowstatic.com/fp/9856cc43e3c84d56119b923a14105a63-p_e.jpg"
+    ],
+    "is_building": false,
+    "identifier_type": "zpid",
+    "sold_price_usd": 390000.0,
+    "sold_date": "2026-09-25"
+  }
+}
+```
+
+> **Only this README hides those values.** The API returns them populated: seller name, street
+> address and the contact fields all come back in your own calls, and for most customers that is
+> the point of the endpoint. They are masked here because a public README is not the right place to
+> republish an individual's details, not because the data is unavailable.
+
+The two rows are the finding in miniature: identical structure, `sold_date` present on both,
+and `sold_price_usd` populated in Columbus and `null` in Austin.
+
 ## Why it is worth measuring yourself
 
 The failure is quiet. It does not raise, it does not 404, and it does not show up in an uptime
