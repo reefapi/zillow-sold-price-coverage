@@ -1,9 +1,11 @@
-# zillow-sold-price-coverage
+# Zillow sold price coverage — does a "recently sold" row actually carry a price? (measured, 2026)
 
-**How often does a "recently sold" row actually come back with a sold price?**
+**Short answer: in four US metros, 41 out of 41. In Austin, Texas, 0 out of 41.**
 
 Measured per metro, because in twelve US states the answer is "almost never" and most real-estate
 APIs will not tell you before you build on them.
+
+Run it yourself with a [free ReefAPI key](https://reefapi.com/signup?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage) (1,000 credits, no card), or point the one provider-specific function at any other [real estate data API](https://reefapi.com/docs/zillow?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage) and compare.
 
 This is a dataset and a script, not a client library. Run it against ReefAPI, or port one function
 and run the same count against any other provider. **The comparison is the point.**
@@ -61,8 +63,10 @@ reports.
 
 ## Run it
 
+Get one at [reefapi.com/signup](https://reefapi.com/signup?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage) — 1,000 credits, no card.
+
 ```bash
-export REEFAPI_KEY=...        # free key, 1,000 credits, no card: https://reefapi.com/signup?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage
+export REEFAPI_KEY=...        # free key, 1,000 credits, no card
 python measure.py             # writes data/coverage.json and data/coverage.csv
 ```
 
@@ -99,7 +103,7 @@ result, a link back is welcome but not expected.
 
 ## Related
 
-* Zillow API docs: <https://reefapi.com/docs/zillow?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage>
-* One key across 300+ data APIs, one credit pool: <https://reefapi.com/?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage>
+* [Zillow API documentation — endpoints, parameters and a runnable example](https://reefapi.com/docs/zillow?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage)
+* [One API key for 300+ web data sources](https://reefapi.com/?utm_source=github&utm_medium=repo&utm_campaign=zillow-sold-price-coverage), one shared credit pool
 
 MIT licensed. Issues and pull requests welcome, especially a `fetch()` for another provider.
