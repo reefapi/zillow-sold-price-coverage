@@ -1,0 +1,129 @@
+{
+  "measured_at": "2026-09-25T13:50:48+00:00",
+  "endpoint": "https://api.reefapi.com/zillow/v1/sold",
+  "non_disclosure_states": [
+    "AK",
+    "ID",
+    "KS",
+    "LA",
+    "MS",
+    "MO",
+    "MT",
+    "NM",
+    "ND",
+    "TX",
+    "UT",
+    "WY"
+  ],
+  "results": [
+    {
+      "metro": "Columbus, OH",
+      "state": "OH",
+      "non_disclosure_state": false,
+      "rows": 41,
+      "sold_price_present": 41,
+      "sold_date_present": 41,
+      "zestimate_present": 36,
+      "price_fill_rate": 1.0,
+      "ok": true,
+      "error": null,
+      "latency_s": 11.91
+    },
+    {
+      "metro": "Charlotte, NC",
+      "state": "NC",
+      "non_disclosure_state": false,
+      "rows": 41,
+      "sold_price_present": 41,
+      "sold_date_present": 41,
+      "zestimate_present": 37,
+      "price_fill_rate": 1.0,
+      "ok": true,
+      "error": null,
+      "latency_s": 7.47
+    },
+    {
+      "metro": "Phoenix, AZ",
+      "state": "AZ",
+      "non_disclosure_state": false,
+      "rows": 41,
+      "sold_price_present": 41,
+      "sold_date_present": 41,
+      "zestimate_present": 39,
+      "price_fill_rate": 1.0,
+      "ok": true,
+      "error": null,
+      "latency_s": 7.87
+    },
+    {
+      "metro": "Denver, CO",
+      "state": "CO",
+      "non_disclosure_state": false,
+      "rows": 41,
+      "sold_price_present": 41,
+      "sold_date_present": 41,
+      "zestimate_present": 35,
+      "price_fill_rate": 1.0,
+      "ok": true,
+      "error": null,
+      "latency_s": 8.91
+    },
+    {
+      "metro": "Austin, TX",
+      "state": "TX",
+      "non_disclosure_state": true,
+      "rows": 41,
+      "sold_price_present": 0,
+      "sold_date_present": 41,
+      "zestimate_present": 39,
+      "price_fill_rate": 0.0,
+      "ok": true,
+      "error": null,
+      "latency_s": 4.61
+    },
+    {
+      "metro": "Houston, TX",
+      "state": "TX",
+      "non_disclosure_state": true,
+      "rows": 41,
+      "sold_price_present": 1,
+      "sold_date_present": 41,
+      "zestimate_present": 39,
+      "price_fill_rate": 0.0244,
+      "ok": true,
+      "error": null,
+      "latency_s": 6.72
+    },
+    {
+      "metro": "Salt Lake City, UT",
+      "state": "UT",
+      "non_disclosure_state": true,
+      "rows": 41,
+      "sold_price_present": 1,
+      "sold_date_present": 35,
+      "zestimate_present": 39,
+      "price_fill_rate": 0.0244,
+      "ok": true,
+      "error": null,
+      "latency_s": 9.04
+    },
+    {
+      "metro": "Jackson, MS",
+      "state": "MS",
+      "non_disclosure_state": true,
+      "rows": 41,
+      "sold_price_present": 1,
+      "sold_date_present": 41,
+      "zestimate_present": 25,
+      "price_fill_rate": 0.0244,
+      "ok": true,
+      "error": null,
+      "latency_s": 5.88
+    }
+  ],
+  "totals": {
+    "rows": 328,
+    "sold_price_present": 167,
+    "sold_date_present": 322
+  }
+}

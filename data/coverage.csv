@@ -1,0 +1,9 @@
+metro,state,non_disclosure_state,rows,sold_price_present,sold_date_present,zestimate_present,price_fill_rate,ok,error,latency_s
+"Columbus, OH",OH,False,41,41,41,36,1.0,True,,11.91
+"Charlotte, NC",NC,False,41,41,41,37,1.0,True,,7.47
+"Phoenix, AZ",AZ,False,41,41,41,39,1.0,True,,7.87
+"Denver, CO",CO,False,41,41,41,35,1.0,True,,8.91
+"Austin, TX",TX,True,41,0,41,39,0.0,True,,4.61
+"Houston, TX",TX,True,41,1,41,39,0.0244,True,,6.72
+"Salt Lake City, UT",UT,True,41,1,35,39,0.0244,True,,9.04
+"Jackson, MS",MS,True,41,1,41,25,0.0244,True,,5.88
